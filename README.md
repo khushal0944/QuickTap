@@ -15,7 +15,7 @@ Welcome to the **Reaction Time Game** project! This web application is designed 
 - **State Management**: Redux
 - **Icons**: Remix Icon
 - **Styling**: Custom CSS with Tailwind utilities
-- **Deployment**: Deployed on vercel, accessible at 
+- **Deployment**: Deployed on vercel, accessible at https://reactiontimegame-khushal-kumars-projects.vercel.app/
 
 
 ## Contributing

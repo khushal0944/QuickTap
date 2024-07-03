@@ -74,8 +74,8 @@ export default function Game() {
 			setColGrid(7);
 		} else if (score >= 190 && score < 200) {
 			setRowGrid(8);
-		} else {
-			setColGrid(5);
+		} else if (score >= 200) {
+			setColGrid(8);
 		}
 		const totalCells = rowGrid * colGrid;
 		const randomIndex = Math.floor(Math.random() * totalCells);

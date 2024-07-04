@@ -56,21 +56,21 @@ export default function Game() {
 	}, []);
 
 	useEffect(() => {
-		if (score >= 35 && score < 60) {
+		if (score >= 20 && score < 40) {
 			setRowGrid(4);
-		} else if (score >= 60 && score < 90) {
+		} else if (score >= 40 && score < 60) {
 			setColGrid(4);
-		} else if (score >= 90 && score < 120) {
+		} else if (score >= 60 && score < 80) {
 			setRowGrid(5);
-		} else if (score >= 120 && score < 140) {
+		} else if (score >= 80 && score < 110) {
 			setColGrid(5);
-		} else if (score >= 140 && score < 160) {
+		} else if (score >= 110 && score < 140) {
 			setRowGrid(6);
-		} else if (score >= 160 && score < 170) {
+		} else if (score >= 140 && score < 160) {
 			setColGrid(6);
-		} else if (score >= 170 && score < 180) {
+		} else if (score >= 160 && score < 170) {
 			setRowGrid(7);
-		} else if (score >= 180 && score < 190) {
+		} else if (score >= 170 && score < 190) {
 			setColGrid(7);
 		} else if (score >= 190 && score < 200) {
 			setRowGrid(8);

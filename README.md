@@ -1,4 +1,4 @@
-# Reaction Time Game <img src="./public/response.png" height="40px" width="40px" />
+# Quicktap | Reaction Time Game <img src="./public/response.png" height="40px" width="40px" />
 
 Welcome to the **Reaction Time Game** project! This web application is designed to test and improve your reflexes through interactive and engaging gameplay. Built with React and Redux, it offers a smooth user experience with real-time statistics tracking and performance metrics.
 

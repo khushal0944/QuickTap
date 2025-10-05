@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             <div
                 id="mainBox"
-                className="text-center h-fit py-4 xs:max-w-2xl max-w-xs w-11/12 px-4 mt-9"
+                className="text-center h-fit pt-10 xs:max-w-2xl max-w-xs w-11/12 px-4 mt-9"
             >
                 <h1 className="text-5xl font-semibold dark:text-white">
                     Reaction{" "}
@@ -139,7 +139,7 @@ export default function Home() {
                     <Link to={"/game"}>
                         <button
                             onClick={playSound}
-                            className=" w-full dark:bg-gray-800 grid place-items-center hover:dark:bg-gray-900 hover:dark:border-white dark:border-[#727272] shadow-xl dark:text-cyan-300 bg-[#f9f8b0] mt-16 hover:scale-[1.05] transition hover:transition rounded-xl border-4 border-black  h-20 "
+                            className=" w-full dark:bg-gray-800 grid place-items-center hover:dark:bg-gray-900 hover:dark:border-white dark:border-[#727272] shadow-xl dark:text-cyan-300 bg-[#f9f8b0] mt-16 hover:scale-[1.04] transition hover:transition rounded-xl border-4 border-black  h-20 "
                         >
                             <Play strokeWidth={2.5} size={40}/>
                         </button>
@@ -148,7 +148,7 @@ export default function Home() {
                 {userName && !showUserStats && (
                     <button
                         onClick={showUserDetails}
-                        className=" w-full mt-8 grid place-items-center dark:bg-gray-800 hover:dark:bg-gray-900 dark:text-cyan-300 hover:dark:border-white dark:border-[#727272] shadow-xl bg-[#f9f8b0] hover:scale-[1.05] transition hover:transition rounded-xl border-4 border-black  h-20 "
+                        className=" w-full mt-8 grid place-items-center dark:bg-gray-800 hover:dark:bg-gray-900 dark:text-cyan-300 hover:dark:border-white dark:border-[#727272] shadow-xl bg-[#f9f8b0] hover:scale-[1.04] transition hover:transition rounded-xl border-4 border-black  h-20 "
                     >
                         <User strokeWidth={2.5} size={40} />
                     </button>
@@ -156,7 +156,7 @@ export default function Home() {
                 {showUserStats && (
                     <button
                         onClick={showUserDetails}
-                        className=" w-full mt-8 grid place-items-center dark:border-[#727272] shadow-xl bg-[#f9f8b0] hover:scale-[1.05] transition hover:transition rounded-xl border-4 border-black  h-20  dark:bg-gray-800 hover:dark:bg-gray-900 hover:dark:border-white dark:text-cyan-300  "
+                        className=" w-full mt-8 grid place-items-center dark:border-[#727272] shadow-xl bg-[#f9f8b0] hover:scale-[1.04] transition hover:transition rounded-xl border-4 border-black  h-20  dark:bg-gray-800 hover:dark:bg-gray-900 hover:dark:border-white dark:text-cyan-300  "
                     >
                         <House size={40} strokeWidth={2.5} />
                     </button>

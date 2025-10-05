@@ -60,10 +60,10 @@ export const GridItems = ({
 				index === highlightedIndex ? (
 					<div
 						key={`${i}-${j}`}
-						className={`bg-black rounded-3xl flex justify-center items-center`}
+						className={`bg-black rounded-3xl flex items-center justify-center`}
 						onClick={highlightedClicked}
 					>
-                        <Pointer strokeWidth={2} size={32}/>
+                        <Pointer strokeWidth={2} color="white" size={40}/>
 					</div>
 				) : (
 					<div key={`${i}-${j}`} onClick={endGame}></div>

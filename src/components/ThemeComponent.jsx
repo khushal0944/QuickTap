@@ -8,6 +8,7 @@ export default function ThemeComponent() {
 	const [inputTheme, setInputTheme] = useState(
 		theme === "dark" ? true : false
 	);
+    const isMuted = useSelector(state => state.muteAudio.muted) || false;
 
 	useEffect(() => {
 		const htmlElement = document.querySelector("html");
@@ -26,6 +27,7 @@ export default function ThemeComponent() {
 	}, []);
 
 	function playSound() {
+        console.log("Play Sound")
 		if (!inputTheme) {
 			audioOnRef.current.volume = 0.8;
 			audioOnRef.current.play();
@@ -45,7 +47,7 @@ export default function ThemeComponent() {
 				<input
 					type="checkbox"
 					checked={inputTheme}
-					onClick={playSound}
+					onClick={() => {if(!isMuted) playSound();}}
 					onChange={(e) => handleThemeToggle(e.currentTarget.checked)}
 				/>
 				<span className="slider"></span>

@@ -4,6 +4,7 @@ import { updateBestAvgTime } from "../slices/bestScoreSlice";
 import { useState, useEffect } from "react";
 import { updateAvgTime } from "../slices/scoreSlice";
 import { updateGamesPlayed, updateBoxClicked } from "../slices/userSlice";
+import {Pointer} from 'lucide-react'
 
 export const GridItems = ({
 	rows,
@@ -18,6 +19,8 @@ export const GridItems = ({
 	const dispatch = useDispatch();
 	const bestAvgTime = useSelector((state) => state.bestOverAll.bestAvgTime);
 	const [avgTime, setAvgTime] = useState(0);
+    const isMuted = useSelector(state => state.muteAudio.muted) || false;
+
 
 	useEffect(() => {
 		if (timeArray.length > 0) {
@@ -30,14 +33,14 @@ export const GridItems = ({
 
 	function highlightedClicked() {
 		const audio = new Audio("./sound2Game.mp3");
-		audio.play();
+		if (!isMuted) audio.play();
 		setScore((prev) => prev + 1);
 		setEndTime(Date.now());
 	}
 
 	const endGame = () => {
 		const audio = new Audio("./GameOver.mp3");
-		audio.play();
+		if (!isMuted) audio.play();
 		if (avgTime) dispatch(updateAvgTime(avgTime.toFixed(0)));
 		if ((avgTime < bestAvgTime || bestAvgTime === 0) && score >= 5) {
 			console.log("Updating Best Avg Time:", avgTime);
@@ -60,7 +63,7 @@ export const GridItems = ({
 						className={`bg-black rounded-3xl flex justify-center items-center`}
 						onClick={highlightedClicked}
 					>
-						<i className="ri-cursor-fill text-white text-3xl transition"></i>
+                        <Pointer strokeWidth={2} size={32}/>
 					</div>
 				) : (
 					<div key={`${i}-${j}`} onClick={endGame}></div>

@@ -10,6 +10,7 @@ export default function GameOver() {
 	const bestAvgTime = useSelector((state) => state.bestOverAll.bestAvgTime);
 	const theme = useSelector((state) => state.themes.theme);
 	const navigate = useNavigate();
+    const isMuted = useSelector(state => state.muteAudio.muted) || false;
 
 	useEffect(() => {
 		let reloadCount = parseInt(localStorage.getItem("reloadCounts") || "0");
@@ -37,7 +38,7 @@ export default function GameOver() {
 	const playSound = () => {
 		const audio = new Audio("./sound1.mp3");
 		audio.volume = 0.7;
-		audio.play();
+		if (!isMuted) audio.play();
 	};
 
 	useEffect(() => {
